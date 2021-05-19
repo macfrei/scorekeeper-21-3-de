@@ -1,16 +1,32 @@
-import './Button.css'
-import PropTypes from 'prop-types'
+// import './Button.css'
+// import PropTypes from 'prop-types'
 
-Button.propTypes = {
-  isActive: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
-  children: PropTypes.node,
-}
+import styled from 'styled-components/macro'
 
-export default function Button({ children, isActive, onClick }) {
-  return (
-    <button onClick={onClick} className={isActive ? 'Button active' : 'Button'}>
-      {children}
-    </button>
-  )
-}
+// Button.propTypes = {
+//   isActive: PropTypes.bool,
+//   onClick: PropTypes.func.isRequired,
+//   children: PropTypes.node,
+// }
+// props
+// export default function Button(props) {
+//   return (
+//     <button onClick={props.onClick} className={isActive ? 'Button active' : 'Button'}>
+//       {children}
+//     </button>
+//   )
+// }
+
+const Button = styled.button`
+  padding: 12px;
+  border: none;
+  background: ${props => (props.isActive ? 'steelblue' : '#ddd')};
+  color: ${props => props.color};
+  border-radius: 8px;
+
+  &:hover {
+    background-color: hotpink;
+  }
+`
+
+export default Button
