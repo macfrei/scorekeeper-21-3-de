@@ -1,23 +1,16 @@
-// import './Button.css'
-// import PropTypes from 'prop-types'
-
+import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 
-// Button.propTypes = {
-//   isActive: PropTypes.bool,
-//   onClick: PropTypes.func.isRequired,
-//   children: PropTypes.node,
-// }
-// props
-// export default function Button(props) {
-//   return (
-//     <button onClick={props.onClick} className={isActive ? 'Button active' : 'Button'}>
-//       {children}
-//     </button>
-//   )
-// }
+Button.propTypes = {
+  isActive: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.node,
+}
+export default function Button(props) {
+  return <ButtonStyled {...props} />
+}
 
-const Button = styled.button`
+const ButtonStyled = styled.button`
   padding: 12px;
   border: none;
   background: ${props => (props.isActive ? 'steelblue' : '#ddd')};
@@ -28,5 +21,3 @@ const Button = styled.button`
     background-color: hotpink;
   }
 `
-
-export default Button
