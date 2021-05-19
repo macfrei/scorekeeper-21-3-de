@@ -1,3 +1,4 @@
+import './Player.css'
 import PropTypes from 'prop-types'
 
 Player.propTypes = {

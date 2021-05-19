@@ -1,3 +1,4 @@
+import './Button.css'
 import PropTypes from 'prop-types'
 
 Button.propTypes = {
